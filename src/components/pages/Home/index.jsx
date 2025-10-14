@@ -5,6 +5,7 @@ import Stats from './Stats.jsx'
 import Slider from './Slider.jsx'
 import Services from './Services.jsx'
 import Carousel from './Crousel.jsx'
+import HomeTexts from './HomeTexts.jsx'
 const HomePage = () => {
   return (
     <>
@@ -12,7 +13,9 @@ const HomePage = () => {
       <Header />
       <main className="relative">
         <Hero />
+        <HomeTexts/>
         <Stats/>
+
         <Slider/>
         <Services/>
         <Carousel/>
