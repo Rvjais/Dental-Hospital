@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <>
       <div className="navbar flex-col">
-        <div className="navTop flex justify-around items-center py-2 ">
+        <div className="navTop flex justify-around items-center py-5 bg-secondary text-primary">
           <div className="location flex gap-1 items-center">
             <MdOutlineLocationOn className="text-xl " />
             <p className="text-[15px]"  > 
@@ -45,7 +45,7 @@ const Header = () => {
             </a>
           </div>
         </div>
-        <div className="navBottom flex justify-around items-center mt-6 bg-amber-500 text-white py-2">
+        <div className="navBottom flex justify-around items-center  bg-primary text-white py-5">
           <div className="logo w-[200px] ">
             <img src={logo} alt="Gnathos Dental Care Logo" />
           </div>
