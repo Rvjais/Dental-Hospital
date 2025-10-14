@@ -102,7 +102,7 @@ export default function Slider() {
     };
 
     return (
-        <div className="bg-[#b9bbb9] overflow-hidden flex items-center justify-center font-sans bg-secondary">
+        <div className=" overflow-hidden flex items-center justify-center font-sans bg-secondary">
             <div className="relative w-[800px] h-[400px] bg-gray-100 shadow-2xl rounded-2xl">
                 <div className="slide w-full h-full rounded-2xl overflow-hidden">
                     {items.map((item, index) => (
