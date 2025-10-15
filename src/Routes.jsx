@@ -6,16 +6,18 @@ import AboutPage from './components/pages/About/index.jsx'
 const AppRoutes = () => {
   return (
     <>
-    <HashRouter>
+    
    
 <BrowserRouter>
+<HashRouter>
 <Routes>
  <Route path='/' element={<HomePage/>} />
  <Route path='/about' element={<AboutPage/>} />
 </Routes>
+ </HashRouter>
 </BrowserRouter>
    
-    </HashRouter>
+   
     </>
   )
 }
