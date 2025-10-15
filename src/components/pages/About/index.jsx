@@ -13,7 +13,6 @@ const AboutPage = () => {
     <Story/>
     <Carousel />
     <Value/>
-    
     </>
   )
 }
