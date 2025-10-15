@@ -11,6 +11,13 @@ import Excellence from './Excellence.jsx'
 import FAQ from './FAQ.jsx'
 import Contacts from './Contacts.jsx'
 import Footer from '../../common/Footer.jsx'
+import Gallery from './Gallery.jsx'
+import Insurance from './Insurance.jsx'
+import Offers from './Offers.jsx'
+import BlogTeasers from './BlogTeasers.jsx'
+import EmergencyBanner from './EmergencyBanner.jsx'
+import PatientJourney from './PatientJourney.jsx'
+import Pricing from './Pricing.jsx'
 const HomePage = () => {
   return (
     <>
@@ -22,12 +29,18 @@ const HomePage = () => {
         <Stats/>
         <Slider/>
         <Services/>
+        <EmergencyBanner />
+        <Gallery />
         <Carousel/>
         <Excellence />
+        <PatientJourney />
         <Solution />
+        <Insurance />
+        <Offers />
+        <Pricing />
+        <BlogTeasers />
         <FAQ />
         <Contacts />
-        <Footer/>
       </main>
     </div>
     </>

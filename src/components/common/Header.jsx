@@ -82,13 +82,23 @@ const Header = () => {
                     {link.name} {link.subLinks && <IoIosArrowDown />}
                   </a>
                   {link.subLinks && isServicesOpen && (
-                    <ul className="absolute top-full left-0 mt-2 w-56 bg-white text-black rounded-md shadow-lg py-2 z-10">
-                      {link.subLinks.map((subLink) => (
-                        <li key={subLink.name} className="px-4 py-2 text-sm hover:bg-gray-100">
-                          <a href={subLink.href}>{subLink.name}</a>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="absolute top-full left-0 mt-2 w-[640px] bg-primary text-white rounded-xl shadow-2xl p-4 z-20 border border-white/10">
+                      <div className="grid grid-cols-2 gap-4">
+                        {link.subLinks.map((subLink) => (
+                          <a key={subLink.name} href={subLink.href} className="group rounded-lg p-3 hover:bg-white/10 transition-colors flex items-start gap-3">
+                            <span className="mt-1 h-2 w-2 rounded-full bg-accent group-hover:bg-white"></span>
+                            <div>
+                              <p className="text-sm font-semibold text-white">{subLink.name}</p>
+                              <p className="text-xs text-white/80">Lorem ipsum dolor sit amet, painless and precise care.</p>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                      <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-3">
+                        <p className="text-xs text-white/80">Explore our full range of treatments.</p>
+                        <a href="#" className="text-xs font-semibold text-accent hover:text-white">View all services →</a>
+                      </div>
+                    </div>
                   )}
                 </li>
               ))}

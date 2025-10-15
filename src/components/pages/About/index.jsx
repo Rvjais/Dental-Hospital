@@ -3,7 +3,14 @@ import AboutHero from './AboutHero'
 import AboutStats from './AboutStats'
 import Value from './Value'
 import Story from './Story'
-import Carousel from '../Home/Crousel'
+import Team from './Team'
+import Mission from './Mission'
+import Testimonials from './Testimonials'
+import Awards from './Awards'
+import Technology from './Technology'
+import Accreditations from './Accreditations'
+import Careers from './Careers'
+import AboutGallery from './Gallery'
 
 const AboutPage = () => {
   return (
@@ -11,7 +18,14 @@ const AboutPage = () => {
     <AboutHero/>
     <AboutStats/>
     <Story/>
-    <Carousel />
+    <Team/>
+    <Mission/>
+    <Technology/>
+    <Accreditations/>
+    <AboutGallery/>
+    <Testimonials/>
+    <Awards/>
+    <Careers/>
     <Value/>
     </>
   )
