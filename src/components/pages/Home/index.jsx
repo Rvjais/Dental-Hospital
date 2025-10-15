@@ -9,6 +9,8 @@ import HomeTexts from './HomeTexts.jsx'
 import Solution from './Solution.jsx'
 import Excellence from './Excellence.jsx'
 import FAQ from './FAQ.jsx'
+import Contacts from './Contacts.jsx'
+import Footer from '../../common/Footer.jsx'
 const HomePage = () => {
   return (
     <>
@@ -24,6 +26,8 @@ const HomePage = () => {
         <Excellence />
         <Solution />
         <FAQ />
+        <Contacts />
+        <Footer/>
       </main>
     </div>
     </>
