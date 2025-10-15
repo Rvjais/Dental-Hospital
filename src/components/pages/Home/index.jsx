@@ -6,6 +6,9 @@ import Slider from './Slider.jsx'
 import Services from './Services.jsx'
 import Carousel from './Crousel.jsx'
 import HomeTexts from './HomeTexts.jsx'
+import Solution from './Solution.jsx'
+import Excellence from './Excellence.jsx'
+import FAQ from './FAQ.jsx'
 const HomePage = () => {
   return (
     <>
@@ -15,10 +18,12 @@ const HomePage = () => {
         <Hero />
         <HomeTexts/>
         <Stats/>
-
         <Slider/>
         <Services/>
         <Carousel/>
+        <Excellence />
+        <Solution />
+        <FAQ />
       </main>
     </div>
     </>
