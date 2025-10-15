@@ -82,7 +82,7 @@ const Header = () => {
                     {link.name} {link.subLinks && <IoIosArrowDown />}
                   </a>
                   {link.subLinks && isServicesOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-[640px] bg-primary text-white rounded-xl shadow-2xl p-4 z-20 border border-white/10">
+                    <div className="absolute right-2 top-full  mt-1 w-[640px] bg-primary text-white rounded-xl shadow-2xl p-4 z-20 border border-white/10">
                       <div className="grid grid-cols-2 gap-4">
                         {link.subLinks.map((subLink) => (
                           <a key={subLink.name} href={subLink.href} className="group rounded-lg p-3 hover:bg-white/10 transition-colors flex items-start gap-3">

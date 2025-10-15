@@ -1,4 +1,3 @@
-import React from 'react'
 import AboutHero from './AboutHero'
 import AboutStats from './AboutStats'
 import Value from './Value'
@@ -11,7 +10,6 @@ import Technology from './Technology'
 import Accreditations from './Accreditations'
 import Careers from './Careers'
 import AboutGallery from './Gallery'
-
 const AboutPage = () => {
   return (
     <>
@@ -30,5 +28,4 @@ const AboutPage = () => {
     </>
   )
 }
-
 export default AboutPage
