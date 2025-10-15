@@ -9,12 +9,12 @@ const AppRoutes = () => {
     
    
 <BrowserRouter>
-<HashRouter>
+
 <Routes>
  <Route path='/' element={<HomePage/>} />
  <Route path='/about' element={<AboutPage/>} />
 </Routes>
- </HashRouter>
+
 </BrowserRouter>
    
    
