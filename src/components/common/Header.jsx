@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { GrPhone } from "react-icons/gr";
@@ -13,18 +14,19 @@ const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
-
   const services = [
-    "Dental Implants", "Root Canal", "Teeth Whitening", "Orthodontics", "Cosmetic Dentistry",
+    { name: "Dental Implants", href: "/dental-implant" },
+    { name: "Root Canal", href: "/root-canal" },
+   
   ];
-
+  
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { 
       name: "Our Services", 
-      href: "#", 
-      subLinks: services.map(service => ({ name: service, href: "#" })) 
+      href: "#",
+      subLinks: services // ✅ FIXED
     },
     { name: "Blog", href: "#" },
     { name: "Contact Us", href: "#" },
@@ -78,20 +80,20 @@ const Header = () => {
                   onMouseEnter={() => link.subLinks && setIsServicesOpen(true)}
                   onMouseLeave={() => link.subLinks && setIsServicesOpen(false)}
                 >
-                  <a href={link.href} className="flex items-center gap-1">
-                    {link.name} {link.subLinks && <IoIosArrowDown />}
-                  </a>
+                 <Link to={link.href} className="flex items-center gap-1">
+  {link.name} {link.subLinks && <IoIosArrowDown />}
+</Link>
                   {link.subLinks && isServicesOpen && (
                     <div className="absolute right-2 top-full  mt-1 w-[640px] bg-primary text-white rounded-xl shadow-2xl p-4 z-20 border border-white/10">
                       <div className="grid grid-cols-2 gap-4">
                         {link.subLinks.map((subLink) => (
-                          <a key={subLink.name} href={subLink.href} className="group rounded-lg p-3 hover:bg-white/10 transition-colors flex items-start gap-3">
+                          <Link key={subLink.name} to={subLink.href} className="group rounded-lg p-3 hover:bg-white/10 transition-colors flex items-start gap-3">
                             <span className="mt-1 h-2 w-2 rounded-full bg-accent group-hover:bg-white"></span>
                             <div>
                               <p className="text-sm font-semibold text-white">{subLink.name}</p>
                               <p className="text-xs text-white/80">Lorem ipsum dolor sit amet, painless and precise care.</p>
                             </div>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                       <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-3">
@@ -138,13 +140,13 @@ const Header = () => {
                       {isMobileServicesOpen && (
                         <ul className="mt-4 space-y-4">
                           {link.subLinks.map((subLink) => (
-                            <li key={subLink.name}><a href={subLink.href} onClick={toggleMobileMenu}>{subLink.name}</a></li>
+                            <li key={subLink.name}><Link to={subLink.href} onClick={toggleMobileMenu}>{subLink.name}</Link></li>
                           ))}
                         </ul>
                       )}
                     </div>
                   ) : (
-                    <a href={link.href} onClick={toggleMobileMenu}>{link.name}</a>
+                    <Link to={link.href} onClick={toggleMobileMenu}>{link.name}</Link>
                   )}
                 </li>
               ))}
