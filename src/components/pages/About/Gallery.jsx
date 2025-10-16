@@ -1,5 +1,5 @@
 import React from 'react'
-import img1 from '../../../assets/Bridge-The-Gap In-Your-Smile.png'
+import img1 from '../../../assets/smile.png'
 import img2 from '../../../assets/Excellence in-Dental-Care.png'
 import img3 from '../../../assets/Restore-Your-Smile-With-Dental-Crowns.png'
 import img4 from '../../../assets/Save-Your-Natural-Tooth.png'
